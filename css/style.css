@@ -1,3 +1,13 @@
+#page {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+} 
+ 
  .mac-frame {
     position: relative;
     width: 450px; /* Adjust width as needed */
@@ -589,7 +599,7 @@ b, strong {
 .tutorial h2{
     color: white;
     font-family: "Maven Pro", sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
@@ -624,7 +634,7 @@ b, strong {
 }
   
   
-.tutorial, .design p, .project p, .fiture p{
+.tutorial p, .design p, .project p, .fiture p{
     font-size: 1rem;
     font-weight: 400 ;
 }
@@ -716,12 +726,138 @@ footer li{
     display: inline;
 }
 
+.scrolling-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 5px;
+  border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffc200;
+}
+
+.card-block {
+  display: inline-block;
+  vertical-align: top; 
+
+  width: 180px;
+  height: 320px;
+  background-color: #fff;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+  border-radius: 24px;
+  margin: 0 1% 1% 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid #ffc200; */
+}
+ 
+.card-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 20px; 
+}
+
+.card-block .card-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-block .card-buttons .view-btn {
+  background-color: rgb(255, 255, 255);
+  opacity: 50%; 
+  color: #ffc200; 
+  border: #ffc200; 
+  border-radius: 24px;
+  padding: 5px 24px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.card-block .card-buttons .add-btn {
+  background-color: rgb(255, 255, 255);
+  opacity: 50%;  
+  color: #000000; 
+  border: #000000; 
+  border-radius: 24px;
+  padding: 5px 24px;
+  margin: 5px;
+  cursor: pointer;
+}
+.card-block .card-buttons .add-btn:hover, .card-block .card-buttons .view-btn:hover {
+  opacity: 100%;   
+}
+
+
+.design a{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  margin-left: 10px;
+  left: 99%;
+}
+
+.card-1 {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+/* Add more styles for other cards here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;
     bottom: 50px;
   }
+}
+@media (max-width: 1200px) {
+  .mac-frame {   
+    width: 360px; 
+    height: 214px;  
+  }
+  
+  .mac-frame img.mac-image { 
+    top: 20px;
+    left: 60px;
+    width: 75%;
+  }
+  .mac-frame .iphone-frame {
+    /* display: none; */
+    /* bottom: -20px;
+    right: -10px; */
+  } 
+  #iphone-img-frame{
+    width: 100px;
+    height: 184px;  
+    margin-bottom: -6px;
+
+  }
+  .iphone-frame .iphone-img-image{
+    width: 120px;
+    height: 190px;
+    /* margin-bottom: ; */
+  } 
 }
 
 /* @media (min-width: 1182.68px) {
@@ -763,7 +899,7 @@ footer li{
       }  
 } */
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .full-screen {
     padding-bottom: 4rem;
   }
@@ -772,8 +908,11 @@ footer li{
     display: none;
   }
 
-  .about-image {
-    margin-top: 4em;
+  .cover-image {
+    margin-top: 2em; 
+    justify-content: center;
+    text-align: center;
+
   }
 
   .mobile-mt-2,
@@ -783,6 +922,10 @@ footer li{
 
   .contact-info {
     padding: 0 2rem;
+  }
+
+  .custom-btn.login-btn i{
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -835,7 +978,7 @@ footer li{
   }
 }
 
-@media (min-width: 452px){
+@media (max-width: 452px){
     .mac-frame {   
         width: 392px; 
         height: 250px;  
@@ -843,13 +986,14 @@ footer li{
       
       .mac-frame img.mac-image {
         
-        /* width: 78%;
-        height: 78%; */
+        width: 78%;
+        /* height: 78%; */
         top: 23px;
         left: 70px;
         
       }
       
+
       .mac-frame .iphone-frame {
         /* display: none; */
         bottom: -20px;
@@ -874,7 +1018,10 @@ footer li{
         height: 180px;
       }  
 }
-@media (max-width: 320px) {
+@media (max-width: 330px) {
+  .tutorial h2, .design h2, .project h2, .fiture h2{ 
+    font-size: 3rem;
+} 
 
     .small-text { 
         font-size: 14px; 
@@ -884,7 +1031,7 @@ footer li{
     margin-top: 0;
   }
 
-  .about-text {
+  .cover-text {
     text-align: center;
   }
 
@@ -906,23 +1053,20 @@ footer li{
   }
 
   .mac-frame {   
-    width: 260px; 
-    height: 160px;  
+    width: 240px; 
+    height: 140px;  
   }
   
-  .mac-frame img.mac-image {
-    
-    /* width: 78%;
-    height: 78%; */
-    top: 16px;
-    left: 43px;
-    
+  .mac-frame img.mac-image { 
+    top: 14px;
+    left: 39px;
+    width: 73%;
   }
   
   .mac-frame .iphone-frame {
-    /* display: none; */
-    bottom: -20px;
-    right: -10px;
+    /* display: none;  */
+    bottom: -10px;
+    right: 0px;
   } 
   
   .mac-frame .iphone-image { 
@@ -931,15 +1075,24 @@ footer li{
     width: 20px; 
   } 
   #iphone-img-frame{
-    width: 77px;
-    height: 155px; 
+    width: 65px;
+    height: 135px; 
     margin-bottom: -9px;
-    margin-right: 5px;
+    margin-right: 3px;
     border-radius: 14px; 
 
   }
   .iphone-frame .iphone-img-image{
-    width: 98px;
-    height: 160px;
+    width: 80px;
+    height: 140px;
   }  
+
+  .design .design-frame {
+
+    height: 520px;     
+  } 
+
+  .tutorial .card{  
+    height: 210px;
+} 
 }
