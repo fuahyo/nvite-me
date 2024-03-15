@@ -982,6 +982,7 @@ footer li{
     .mac-frame {   
         width: 392px; 
         height: 250px;  
+        margin-left: -15px;
       }
       
       .mac-frame img.mac-image {
@@ -1054,7 +1055,7 @@ footer li{
 
   .mac-frame {   
     width: 240px; 
-    height: 140px;  
+    height: 140px;   
   }
   
   .mac-frame img.mac-image { 
